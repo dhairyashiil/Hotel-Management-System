@@ -1,0 +1,212 @@
+Project
+
+Business Requirenment
+1. Room management
+2. Customer management
+3. Payment and Billing
+4. Staff Management
+
+Business Entities
+1. Hotel Branch
+2. Customers
+3. Room
+4. Employees
+5. Reservation
+6. Payment
+7. Extra Services
+
+Flow:-
+
+1. Login/SignUp
+2. Operations to be performed
+	2.1. Show Available Rooms
+		2.1.1. Rooms by Type
+		2.1.2. Booked Rooms
+		2.1.2. All Rooms
+	2.2. Add Booking
+	2.3. Calculate Bill
+	2.4. Cancel Booking
+	2.5. Add Employee
+	2.6. Show Employee Details
+	2.7. Show Room Details
+	2.8. Show Available Facilities
+	2.9. Show Services
+	2.10. Branch Details
+	
+3. LogOut
+
+Classes
+
+1. HotelManagement
+	Attributes - 1. userName - String
+			 2. password - String
+			 3. operationChoice - int
+
+	Functions - 1. login()
+			2. setUsername()
+			2. menuList()
+			4. logOut()
+
+2. Branch
+	Attributes - 1. branchName - String
+			 2. branchId - int
+			 3. branchType - String
+			 4. branchLocation - String
+			 5. totalCapacity - int
+			 6. availableCapacity - int
+
+	Functions - 1. getCapacity()
+			2. getBrachDetails()
+
+3. Room
+	Attributes - 1. roomId - int
+			 2. roomType - String
+			 3. cleaningCheck - String
+			 4. bookingCheck - String
+
+	Functions - 1. addRoom()
+			2. getRoom()
+			3. getFacilities()
+		
+4. Reservation
+	Attributes - 1. reservationId - int
+                   2. checkInTime - Date
+			 3. checkOutTime - Date
+			 4. deposit - int
+
+	Functions - 1. bookReservation()
+			2. cancleReservation()
+			3. getReservation()
+			
+5. Customer
+ 	Attributes - 1. custId - int
+			 2. custName - String
+			 3. custAddress - String
+			 4. custPhoneNumber - String
+			 5. custEmail - String
+
+	Function - 1. addCustomer()
+		     2. updateCustomer()
+		     3. banCustomer()
+		     4. getCustomer()
+
+6. Employee
+	Attributes - 1. empName	- String
+			 2. empId - int
+			 3. empSalary - int
+			 4. empGender - String
+			 5. empAge - int
+			 6. empRole - String
+			 7. empPhone - String
+			 8. empAddress - String
+			 9. empShift - String
+
+	Functions - 1. addEmployee()
+			2. getEmployee()
+			3. updateEmployee()
+			4. deleteEmployee()
+
+7. Billing
+	Attributes - 1. billId - int
+			 2. totalAmount - int
+
+	Functions - 1. calcBill()
+			2. calcDays()
+			3. generateReceipt()
+
+
+Tables 
+	1. BRANCH
+		FIELDS -
+		1.1. BRANCH_ID - PK
+		1.2. BRANCH_NAME
+		1.3. BRANCH_LOCATION
+	
+	2. ROOMS
+		FIELDS - 
+		2.1. ROOM_ID - PK
+		2.2. BRANCH_ID - FK
+		2.3. ROOM_TYPE
+		2.4. CLEANING_CHECK
+		2.5. BOOKING_CHECK
+		2.6. PRICE
+
+	3. EMPLOYEES
+		FIELDS - 
+		3.1. EMP_ID - PK
+		3.2. BRANCH_ID - FK
+		3.3. EMP_NAME
+		3.4. EMP_ROLE
+		3.5. EMP_SALARY
+		3.6. EMP_PHONE
+		3.7. EMP_ADDRESS
+		3.8. EMP_AGE
+		3.9. EMP_SHIFT
+		
+	4. RESERVATION
+		FIELDS - 
+		4.1. RESERVATION_ID - PK
+		4.2. ROOM_ID - FK
+		4.3. BRANCH_ID - FK
+		4.4. CUSTOMER_ID - FK
+		4.5. CHECK_IN 
+ 		4.6. CHECK_OUT
+		
+	5. CUSTOMER
+		FIELDS - 
+		5.1. CUST_ID - PK
+		5.2. ROOM_ID - FK
+		5.3. BRANCH_ID - FK
+		5.4. CUST_NAME
+		5.5. CUST_GENDER
+		5.6. CUST_ADDRESS	
+		5.7. CUST_DEPOSIT	
+    		5.8. CUST_PHONE
+
+	6. SERVICES
+		FIELDS - 
+		6.1. SERVICE_ID - PK
+		6.2. SERVICE_NAME
+		6.3. SERVICE_PRICE
+
+	7. BILL
+		FIELDS - 
+		7.1. BILL_ID - PK
+		7.2. CUSTOMER_ID - FK
+		7.3. DEPOSIT
+		7.4. TOTAL_AMOUNT
+		7.5. STATUS
+
+	8. CUSTOMERS_SERVICES
+		FIELDS - 
+		8.1. CUSTOMER_ID - FK
+		8.2. SERVICE_ID - FK
+
+	9. HOTEL
+		FIELDS - 
+		9.1. HOTEL_ID - PK
+		9.2. NAME
+		9.3. ADDRESS
+
+	10. FACILITIES
+		FIELDS - 
+		10.1. FACILITY_ID - PK
+		10.2. ROOM_ID - FK
+		10.3. NAME
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

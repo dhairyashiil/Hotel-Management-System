@@ -1,0 +1,36 @@
+1.Hotel
+	1.1 LOGIN
+	1.2 Room Management
+		1.2.1 ADD Room
+		1.2.2 Rooms Details
+			1.2.2.1 AVAILABLE ONLY
+			1.2.2.2 ALL
+			1.2.2.3 NOT AVAILABLE
+		1.2.3 Rooms Facilities 
+			1.2.3.1 ALL ROOM TYPE
+			1.2.3.2 SPECIFIC ROOM TYPE
+		1.2.4 RESERVATION
+			1.2.4.1 BOOK
+			1.2.4.2 CANCEL
+			1.2.4.3 GET
+		
+	1.3 Customer Management
+		1.3.1 ADD Customer
+		1.3.2 UPDATE Customer
+		1.3.3 Details of Customer
+	1.4 payment and billing
+		1.4.1 ROOM BILL
+		1.4.2 SERVICE BILL
+		1.4.3 PENALTY BILL
+		1.4.4 TOTAL BILL
+	1.5 Staff Management
+		1.5.1 ADD
+		1.5.2 UPDATE
+		1.5.3 GET DETAILS
+		1.5.4 DELETE 
+	1.6 BRANCH MANAGEMENT
+		1.6.1 GET_CAPACITY
+		1.6.2 DETAILS
+	1.7 SERVICE MANAGEMENT
+		1.7.1 SHOW ALL SERVICES DETAILS
+		1.7.2 CUSTOMERS SERVICE
